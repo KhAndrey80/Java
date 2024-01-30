@@ -11,7 +11,9 @@ public class Dog extends Animal{
   public Dog(){
     super();
 }
-
+      public void fly(){
+      System.out.println(getType() + " не умеет летать ");
+}
 
 
 } 

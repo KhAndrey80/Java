@@ -61,6 +61,23 @@ public class Animal {
         return getClass().getSimpleName();
     }
 
+    protected void toGo(){
+        System.out.println(nickname + " двигается ");
+    }
+
+    protected void fly(){
+        System.out.println(nickname + " летит ");
+    }
+
+    protected void swim(){
+        System.out.println(nickname+ " плывет ");
+    }
+    public void Activity(){
+        toGo();
+        fly();
+        swim();
+    }
+    
     private void hunt(){
         System.out.println("Животное охотится");
     }
