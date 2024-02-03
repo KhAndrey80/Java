@@ -11,5 +11,8 @@ public class Duck extends Animal{
   public Duck(){
     super();
 }
-
+@Override
+public void eat() {
+    System.out.println("Утка ест зерно");
+}
 } 

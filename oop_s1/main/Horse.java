@@ -14,6 +14,9 @@ public class Horse extends Animal{
 
         public void fly(){
     System.out.println(nickname + " не умеет летать ");
-
 } 
+@Override
+public void eat() {
+    System.out.println("Лошадь ест овес");
+}
 }

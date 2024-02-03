@@ -2,7 +2,7 @@ package oop_s1.main;
 
 import java.time.LocalDate;
 
-public class Animal {
+public abstract class Animal {     //добавили абстракт
     
     protected String nickname; // protected значит он будет виден в самом классе и его наследниках
     
@@ -20,7 +20,8 @@ public class Animal {
         this.birthDate = birthDate;
         this.illness = illness; 
     }
-     
+    
+
         public Animal(){
 
             this("Кличка", new Owner("Хозяин"), LocalDate.now(),new Illness("Болезнь"));
@@ -46,12 +47,12 @@ public class Animal {
         public void setIllness (Illness illness){
             this.illness = illness;
 }
-        public void LifeCycle(){
-            wakeUp("12:00");
-            hunt();
-            eat();
-            sleep();
-        }
+        // public void LifeCycle(){
+        //     wakeUp("12:00");
+        //     hunt();
+        //     eat();
+        //     sleep();
+        // }
 
     private void wakeUp(String time){ // можно убрать аргумент
         System.out.println("Животное " + nickname + " проснулось в " + time); // тогда и здесь time убрать
@@ -61,9 +62,6 @@ public class Animal {
         return getClass().getSimpleName();
     }
 
-    protected void toGo(){
-        System.out.println(nickname + " двигается ");
-    }
 
     protected void fly(){
         System.out.println(nickname + " летит ");
@@ -82,9 +80,8 @@ public class Animal {
         System.out.println("Животное охотится");
     }
 
-    private void eat(){
-        System.out.println("Животное ест");
-    }
+    public abstract void eat();
+
     private void sleep(){
         System.out.println("Животное уснуло");
     }
